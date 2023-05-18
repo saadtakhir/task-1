@@ -1,0 +1,39 @@
+@url = http://localhost:5060/api/tasks
+
+###
+GET {{url}}
+
+###
+POST {{url}}
+Content-Type: application/json
+X-Access-Key: yoTPzDnvYUEC3J3ytZ8MCx70fdmFhXLD
+
+{
+    "message": "task 1",
+    "owner": "John",
+    "target": "Bily",
+    "created": "2023-03-04",
+    "deadline": "2023-03-10"
+}
+
+###
+GET {{url}}/1
+
+###
+GET {{url}}/target/Saly
+
+###
+DELETE {{url}}/1
+X-Access-Key: yoTPzDnvYUEC3J3ytZ8MCx70fdmFhXLD
+
+###
+PUT {{url}}/1
+X-Access-Key: yoTPzDnvYUEC3J3ytZ8MCx70fdmFhXLD
+
+{
+    "message": "task 1",
+    "owner": "John",
+    "target": "Bily",
+    "created": "2023-03-04",
+    "deadline": "2023-03-20"
+}
